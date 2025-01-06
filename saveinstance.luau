@@ -37,7 +37,7 @@ do
 
 	local finder
 	finder, global_container = loadstring(
-		game:HttpGet("https://raw.githubusercontent.com/rbxlx/SomeHub/main/" .. filename .. ".luau", true),
+		game:HttpGet("https://raw.githubusercontent.com/eprominecraft/SomeHub/main/" .. filename .. ".luau", true),
 		filename
 	)()
 
@@ -206,7 +206,7 @@ do -- * Load Region of Déjà Vu
 		local hashlib_sha384
 		pcall(function()
 			hashlib_sha384 = loadstring(
-				game:HttpGet("https://raw.githubusercontent.com/rbxlx/SomeHub/main/" .. filename .. ".luau", true),
+				game:HttpGet("https://raw.githubusercontent.com/eprominecraft/SomeHub/main/" .. filename .. ".luau", true),
 				filename
 			)()(4544052033).sha384
 		end)
@@ -1027,8 +1027,8 @@ do
 
 	local NotScriptableFixes = { --[[
 		For more info: 
-		- https://github.com/rbxlx/UniversalSynSaveInstance/blob/main/Tools/NotScriptable-Related/Potentially%20Missing%20Properties%20Dumper/Potentially%20Missing%20Properties%20Dumper.luau
-		- https://github.com/rbxlx/UniversalSynSaveInstance/blob/main/Tools/NotScriptable-Related/NotScriptable%20Dumper/NotScriptable%20Dumper.py
+		- https://github.com/eprominecraft/UniversalSynSaveInstance/blob/main/Tools/NotScriptable-Related/Potentially%20Missing%20Properties%20Dumper/Potentially%20Missing%20Properties%20Dumper.luau
+		- https://github.com/eprominecraft/UniversalSynSaveInstance/blob/main/Tools/NotScriptable-Related/NotScriptable%20Dumper/NotScriptable%20Dumper.py
 		]]
 		Instance = {
 			AttributesSerialize = function(instance)
@@ -1514,7 +1514,7 @@ local GLOBAL_ENV = getgenv and getgenv() or _G or shared
 --- @field RemovePlayerCharacters boolean -- Ignore player characters while saving. (Enables SaveNonCreatable automatically). ___Default:___ true
 --- @field SaveNonCreatable boolean -- * Includes non-serializable instances as Folder objects (Name is misleading as this is mostly a fix for certain NilInstances and isn't always related to NotCreatable). ___Default:___ false
 --- .NotCreatableFixes table<Instance.ClassName> -- * {"Player"} is the same as {Player = "Folder"}; Format like {SpawnLocation = "Part"} is only to be used when SpawnLocation inherits from "Part" AND "Part" is Creatable. ___Default:___ { "", "Player", "PlayerScripts", "PlayerGui", "TouchTransmitter" }
---- @field IsolatePlayers boolean -- * This option does save players, it's just they won't show up in Studio and can only be viewed through the place file code (in text editor). More info at https://github.com/rbxlx/UniversalSynSaveInstance/issues/2. ___Default:___ false
+--- @field IsolatePlayers boolean -- * This option does save players, it's just they won't show up in Studio and can only be viewed through the place file code (in text editor). More info at https://github.com/eprominecraft/UniversalSynSaveInstance/issues/2. ___Default:___ false
 --- @field AlternativeWritefile boolean -- * Splits file content string into segments and writes them using appendfile. This might help with crashes when it starts writing to file. Though there is a risk of appendfile working incorrectly on some executors. ___Default:___ true
 --- @field IgnoreDefaultPlayerScripts boolean -- * **RISKY: Ignores Default PlayerScripts like PlayerModule & RbxCharacterSounds. Prevents crashes on certain Executors. ___Default:___ true
 --- @field IgnoreSharedStrings boolean -- * **RISKY: FIXES CRASHES (TEMPORARY, TESTED ON ROEXEC ONLY). FEEL FREE TO DISABLE THIS TO SEE IF IT WORKS FOR YOU**. ___Default:___ true
@@ -1538,7 +1538,7 @@ local GLOBAL_ENV = getgenv and getgenv() or _G or shared
 	Saves instances with specified options. Example:
 	```lua
 	local Params = {
-		RepoURL = "https://raw.githubusercontent.com/rbxlx/SynSaveInstance/main/",
+		RepoURL = "https://raw.githubusercontent.com/eprominecraft/SynSaveInstance/main/",
 		SSI = "saveinstance",
 	}
 
